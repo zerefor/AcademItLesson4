@@ -1,17 +1,13 @@
-/*
-import java.security.spec.RSAOtherPrimeInfo;
+import java.util.Date;
 
-public class person2 {
+public class PersonRunner {
     public static void main(String[] args) {
         String name = "Ivan";
         String middleName = "Jovanovich";
         String familyName = "Ivanov";
         int age = 25;
-        int day = 16;
-        int month = 1;
-        int year = 2000;
 
-        Person person = new Person(name, middleName, familyName, age, day, month, year);
+        Person person = new Person(name, middleName, familyName, age);
 
         System.out.println("original name = " + person.getName());
         person.setName("Akakyi");
@@ -28,27 +24,17 @@ public class person2 {
         System.out.println("redacted familyName = " + person.getFamilyName());
         System.out.println();
 
-
-        System.out.println("original day = " + person.getDay());
-        person.setDay(17);
-        System.out.println("redacted day = " + person.getDay());
-        System.out.println();
-
-        System.out.println("original Month = " + person.getMonth());
-        person.setMonth(2);
-        System.out.println("redacted Month = " + person.getMonth());
-        System.out.println();
-
-        System.out.println("original year = " + person.getYear());
-        person.setYear(1980);
-        System.out.println("redacted year = " + person.getYear());
-        System.out.println();
-
         System.out.println("original age = " + person.getAge());
-        person.setAge(2023 - person.getYear());
+        person.setAge(29);
         System.out.println("redacted age = " + person.getAge());
         System.out.println();
 
+        Date year = new Date();
+        int currentYear = year.getYear() + 1900;
+
+        int birthYear = (currentYear - person.getAge());
+
         System.out.println(person);
+        System.out.println("Born of year: " + birthYear);
     }
-}*/
+}

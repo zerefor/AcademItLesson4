@@ -5,30 +5,12 @@ public class Person {
     private String middleName;
     private String familyName;
     private int age;
-    private int year;
-    private int day;
-    private int month;
 
-    public Person(String name, String middleName, String familyName, int age, int day, int month, int year) {
+    public Person(String name, String middleName, String familyName, int age) {
         this.name = name;
         this.middleName = middleName;
         this.familyName = familyName;
         this.age = age;
-        this.year = year;
-        this.day = day;
-        this.month = month;
-    }
-
-    public int getDay() {
-        return day;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public int getMonth() {
-        return month;
     }
 
     public int getAge() {
@@ -75,29 +57,8 @@ public class Person {
         System.out.println("age changed");
     }
 
-    public void setDay(int day) {
-        if (!(day < 1)) {
-            this.day = day;
-        }
-        System.out.println("day changed");
-    }
-
-    public void setMonth(int month) {
-        if (!(month < 1)) {
-            this.month = month;
-        }
-        System.out.println("month changed");
-    }
-
-    public void setYear(int year) {
-        if ((year >= 1960)) {
-            this.year = year;
-        }
-        System.out.println("year changed");
-    }
-
     @Override
     public String toString() {
-        return middleName + " " + name + " " + familyName + " " + age + "\n" + day + "." + month + "." + year;
+        return middleName + " " + name + " " + familyName + " " + age + " - Year";
     }
 }
