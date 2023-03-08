@@ -29,9 +29,8 @@ public class PersonRunner {
         System.out.println("redacted age = " + person.getAge());
         System.out.println();
 
-        Date year = new Date();
-        int currentYear = year.getYear() + 1900;
-
+        Date yearDate = new Date();
+        int currentYear = yearDate.getYear() + 1900;
         int birthYear = (currentYear - person.getAge());
 
         System.out.println(person);
