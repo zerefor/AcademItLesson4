@@ -14,16 +14,15 @@ public class ArithmeticMean {
         int numbersQuantity = 0;
         int evenNumbersSum = 0;
         int evenNumbersQuantity = 0;
-        int i = startNumber;
 
-        while (i <= endNumber) {
-            if (i % 2 == 0) {
-                evenNumbersSum += i;
+        while (startNumber <= endNumber) {
+            if (startNumber % 2 == 0) {
+                evenNumbersSum += startNumber;
                 ++evenNumbersQuantity;
             }
-            numbersSum += i;
+            numbersSum += startNumber;
             ++numbersQuantity;
-            ++i;
+            ++startNumber;
         }
 
         double evenArithmeticMean = (double) evenNumbersSum / evenNumbersQuantity;
