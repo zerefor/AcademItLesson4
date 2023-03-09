@@ -1,4 +1,4 @@
-import java.security.spec.RSAOtherPrimeInfo;
+import java.util.Date;
 
 public class Person {
     private String name;
@@ -57,8 +57,14 @@ public class Person {
         System.out.println("age changed");
     }
 
+    public int calculateYearBorn() {
+        Date yearDate = new Date();
+        int currentYear = yearDate.getYear() + 1900;
+        return (currentYear - this.age);
+    }
+
     @Override
     public String toString() {
-        return middleName + " " + name + " " + familyName + " " + age + " - Year";
+        return middleName + " " + name + " " + familyName + " " + age + " - Year\nBorn of Year: " + calculateYearBorn();
     }
 }

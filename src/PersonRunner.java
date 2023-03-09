@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class PersonRunner {
     public static void main(String[] args) {
         String name = "Ivan";
@@ -29,11 +27,8 @@ public class PersonRunner {
         System.out.println("redacted age = " + person.getAge());
         System.out.println();
 
-        Date yearDate = new Date();
-        int currentYear = yearDate.getYear() + 1900;
-        int birthYear = (currentYear - person.getAge());
-
+        int birthYear = (person.calculateYearBorn());
+        System.out.println(birthYear);
         System.out.println(person);
-        System.out.println("Born of year: " + birthYear);
     }
 }

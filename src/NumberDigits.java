@@ -7,10 +7,7 @@ public class NumberDigits {
         System.out.println("Enter a number:");
         int number = scanner.nextInt();
 
-        if (number < 0) {
-            number = number * (-1);
-        }
-
+        number = Math.abs(number);
         int digitsSum = 0;
         int oddDigitsSum = 0;
         int maxDigit = 0;
